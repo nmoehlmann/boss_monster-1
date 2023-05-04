@@ -1,0 +1,9 @@
+.bossMonster {
+object-fit: contain;
+max-width: 200px;
+max-height: 200px;
+}
+
+.ganondorfImg {
+  object-fit: contain;
+}

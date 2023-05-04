@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+    integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+  <link rel="stylesheet" href="style.css">
+  <title>Boss Monster</title>
+</head>
+
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
+
+<body class="debug">
+  <header class="container-fluid text-center">
+    <section class="row">
+      <div class="col">
+        <h1>Boss Monster</h1>
+      </div>
+    </section>
+  </header>
+
+  <main class="container-fluid">
+
+    <!-- NOTE MONSTER FIGHT -->
+    <section class="row">
+      <div class="col-12">
+        <div class="card">
+          <h1>
+            Hydra
+          </h1>
+          <img class="bossMonster"
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e010234b-f821-440e-befc-b2f05bc0beab/d7pxmll-a5951e17-008e-4b09-97be-7f6b0e517364.jpg/v1/fill/w_1043,h_766,q_70,strp/_hydra__by_arvalis_d7pxmll-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTE3NiIsInBhdGgiOiJcL2ZcL2UwMTAyMzRiLWY4MjEtNDQwZS1iZWZjLWIyZjA1YmMwYmVhYlwvZDdweG1sbC1hNTk1MWUxNy0wMDhlLTRiMDktOTdiZS03ZjZiMGU1MTczNjQuanBnIiwid2lkdGgiOiI8PTE2MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.x0ifz9aJQbTTpriW3ZJ-afkmvwSPiCnZJ8kIEn8M7EQ"
+            alt="Hydra">
+            <p>Level<span id="bossLevel">1</span></p>
+            <p><span id="bossHealth">100</span>Health</p>
+            <button onclick="attackBoss()">Attack</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTE CHARACTER SECTION -->
+    <section class="row">
+      <div class="col-6">
+        <div class="card">
+          <h3>
+            Ganondorf
+          </h3>
+          <img class="bossMonster"
+            src="https://thenerdstash.com/wp-content/uploads/2023/04/tears-of-the-kingdom-ganondorf.jpg"
+            alt="Ganondorf">
+            <p><span id="ganondorfHealth">100</span>Health</p>
+            <p>Damage: 5</p>
+        </div>
+      </div>
+
+      <!-- LINK SECTION -->
+      <div class="col-6">
+        <div class="card">
+          <h3>
+            Link
+          </h3>
+          <img class="bossMonster"
+            src="https://www.zeldadungeon.net/wiki/images/thumb/d/d8/Link_-_TotK_key_art_nobg.png/400px-Link_-_TotK_key_art_nobg.png"
+            alt="Link">
+            <p><span id="linkHealth">50</span>Health</p>
+            <p>Damage: 10</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTE SHOP/WARES/INVENTORY -->
+    <section class="row">
+      <div class="col-6">
+        <h4>
+          Wares
+        </h4>
+        <p>Gold 💰<span id="gold">0</span></p>
+      </div>
+      <div class="col-6">
+        <p>Health Potions</p>
+        <button onclick="healLink()">Give To Link</button>
+        <button onclick="healGanondorf()">Give to Ganondorf</button>
+      </div>
+    </section>
+
+
+
+
+
+
+  </main>
+</body>
+
+
+
+
+
+
+<script src="main.js"></script>
+
+</html>
